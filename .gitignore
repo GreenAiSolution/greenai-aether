@@ -1,0 +1,9 @@
+# Internal docs — never publish these to GitHub
+sales-playbook.html
+SETUP_GUIDE.md
+
+# macOS / editor noise
+.DS_Store
+.idea/
+.vscode/
+*.swp

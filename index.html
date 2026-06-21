@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="theme-color" content="#05060a" />
+<title>AETHER — Autonomous AI Agents by GreenAI</title>
+<meta name="description" content="AETHER deploys self-directed AI agents that plan, reason, and execute across your entire stack. The world's most in-demand autonomous intelligence — now an immersive experience." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+
+  <!-- ===== Loader ===== -->
+  <div id="loader">
+    <div class="loader-inner">
+      <div class="loader-mark">AETHER</div>
+      <div class="loader-bar"><span id="loader-fill"></span></div>
+      <div class="loader-pct" id="loader-pct">0%</div>
+      <div class="loader-sub">Initializing autonomous core</div>
+    </div>
+  </div>
+
+  <!-- ===== WebGL canvas ===== -->
+  <canvas id="scene"></canvas>
+  <div id="scrim"></div>
+
+  <!-- ===== Top navigation ===== -->
+  <header id="nav">
+    <a class="brand" href="#hero" data-jump="0">
+      <span class="brand-dot"></span>
+      AETHER<span class="brand-sub">by GreenAI</span>
+    </a>
+    <nav class="nav-links">
+      <a href="#intelligence" data-jump="1">Intelligence</a>
+      <a href="#capabilities" data-jump="2">Capabilities</a>
+      <a href="#scale" data-jump="3">Scale</a>
+      <a href="#integrate" data-jump="4">Integrate</a>
+      <a href="#packages" data-jump="5">Packages</a>
+    </nav>
+    <button id="tour-btn" class="cta-ghost">▶ Auto Tour</button>
+  </header>
+
+  <!-- ===== Scroll progress rail ===== -->
+  <div id="rail">
+    <div class="rail-track"><span id="rail-fill"></span></div>
+    <ul class="rail-dots">
+      <li data-jump="0" class="active"></li>
+      <li data-jump="1"></li>
+      <li data-jump="2"></li>
+      <li data-jump="3"></li>
+      <li data-jump="4"></li>
+      <li data-jump="5"></li>
+    </ul>
+  </div>
+
+  <!-- ===== Scrollytelling content ===== -->
+  <main id="content">
+
+    <section class="panel" id="hero" data-index="0">
+      <div class="panel-inner center">
+        <div class="eyebrow reveal">⬤ AUTONOMOUS INTELLIGENCE · 2026</div>
+        <h1 class="reveal">Agents that think,<br/><em>then do.</em></h1>
+        <p class="lede reveal">AETHER deploys self-directed AI agents that plan, reason and execute across your entire stack — the most in-demand product intelligence has ever built.</p>
+        <div class="hero-cta reveal">
+          <button class="cta-primary" data-jump="4">View packages</button>
+          <button class="cta-ghost" id="tour-btn-2">▶ Take the tour</button>
+        </div>
+        <div class="scroll-hint reveal">scroll to enter <span>↓</span></div>
+      </div>
+    </section>
+
+    <section class="panel" id="intelligence" data-index="1">
+      <div class="panel-inner left">
+        <div class="eyebrow reveal">01 · THE CORE</div>
+        <h2 class="reveal">A reasoning engine<br/>that never sleeps.</h2>
+        <p class="body reveal">At the center sits a living neural core — continuously planning, simulating outcomes and self-correcting. Watch it pulse as it reasons through millions of decisions per second.</p>
+        <ul class="ticks reveal">
+          <li>Multi-step planning &amp; reflection</li>
+          <li>Self-healing error recovery</li>
+          <li>Long-horizon memory</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="panel" id="capabilities" data-index="2">
+      <div class="panel-inner right">
+        <div class="eyebrow reveal">02 · CAPABILITIES</div>
+        <h2 class="reveal">Enterprise-grade<br/>autonomy.</h2>
+        <div class="cap-grid reveal">
+          <div class="cap"><span class="cap-num">⌘</span><h3>Autonomous tool use</h3><p>Calls APIs, browses, writes code and operates your software end-to-end — no human in the loop required.</p></div>
+          <div class="cap"><span class="cap-num">∞</span><h3>Multi-agent orchestration</h3><p>Spawns and commands fleets of specialized sub-agents that collaborate toward a single objective.</p></div>
+          <div class="cap"><span class="cap-num">◈</span><h3>Long-horizon reasoning</h3><p>Breaks ambiguous goals into verifiable, executable plans and self-corrects against live results.</p></div>
+          <div class="cap"><span class="cap-num">⟳</span><h3>Self-healing reliability</h3><p>Detects failures, retries intelligently and recovers autonomously to hold a 99.98% uptime SLA.</p></div>
+          <div class="cap"><span class="cap-num">⛨</span><h3>Bank-grade security</h3><p>SOC 2 Type II, SSO, role-based access, full audit logs and private VPC or on-prem deployment.</p></div>
+          <div class="cap"><span class="cap-num">◧</span><h3>Live command center</h3><p>Real-time dashboards, human approval gates and a complete, exportable trail of every agent action.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel" id="scale" data-index="3">
+      <div class="panel-inner center">
+        <div class="eyebrow reveal">03 · SCALE</div>
+        <h2 class="reveal">Built for planetary demand.</h2>
+        <div class="stats reveal">
+          <div class="stat"><div class="stat-num" data-count="50" data-suffix="M+">0</div><div class="stat-label">agent-hours run</div></div>
+          <div class="stat"><div class="stat-num" data-count="99" data-suffix=".98%">0</div><div class="stat-label">uptime SLA</div></div>
+          <div class="stat"><div class="stat-num" data-count="180" data-suffix="ms">0</div><div class="stat-label">median latency</div></div>
+          <div class="stat"><div class="stat-num" data-count="40" data-suffix="k+">0</div><div class="stat-label">teams onboarded</div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel" id="integrate" data-index="4">
+      <div class="panel-inner integrate-inner">
+        <div class="eyebrow reveal">04 · INTEGRATE</div>
+        <h2 class="reveal">Paid Monday.<br/>Live by Wednesday.</h2>
+        <p class="lede reveal">Our 48-hour onboarding pipeline turns your purchase into a production agent — connected, tested and operating inside your stack — in two business days.</p>
+
+        <div class="timeline reveal">
+          <div class="tl-step">
+            <div class="tl-num">01</div>
+            <div class="tl-time">Hour 0 — Checkout</div>
+            <h4>Onboard in 5 minutes</h4>
+            <p>Pay, fill the intake form and one-click-connect your tools via secure OAuth. No tickets, no email chains.</p>
+          </div>
+          <div class="tl-step">
+            <div class="tl-num">02</div>
+            <div class="tl-time">Hours 0–36 — Build</div>
+            <h4>Custom build by our pod</h4>
+            <p>A senior AI engineer configures your agent on Claude + n8n, wires your connectors, and loads your business context.</p>
+          </div>
+          <div class="tl-step">
+            <div class="tl-num">03</div>
+            <div class="tl-time">Hours 36–48 — Launch</div>
+            <h4>Go live with white-glove handoff</h4>
+            <p>Live walkthrough call, command-center access, 24/7 monitoring on. Your agent is now working autonomously.</p>
+          </div>
+        </div>
+
+        <div class="connectors reveal">
+          <div class="connectors-label">PLUG INTO 8,000+ APPS</div>
+          <div class="connectors-grid">
+            <span>Slack</span><span>Microsoft Teams</span><span>Gmail</span><span>Outlook</span>
+            <span>HubSpot</span><span>Salesforce</span><span>Pipedrive</span><span>Notion</span>
+            <span>Airtable</span><span>Google Workspace</span><span>Microsoft 365</span><span>Stripe</span>
+            <span>Shopify</span><span>QuickBooks</span><span>Calendly</span><span>Intercom</span>
+            <span>Zendesk</span><span>WhatsApp</span><span>Twilio</span><span>Zapier</span>
+            <span>Make</span><span>Pipedream</span><span>Webhook / API</span><span>+ anything with an API</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel" id="packages" data-index="5">
+      <div class="panel-inner packages-inner">
+        <div class="eyebrow reveal">04 · PACKAGES</div>
+        <h2 class="reveal">Own your AI workforce.</h2>
+        <p class="lede reveal">Three ways in — from a templated agent you can deploy in days to a fully orchestrated fleet running your operation 24/7. White-glove from the first conversation.</p>
+
+        <div class="price-grid">
+          <div class="price-card reveal">
+            <h3 class="tier">Spark</h3>
+            <p class="tier-for">Land your first agent — fast</p>
+            <div class="price"><span class="amount">$997</span><span class="per">/mo</span></div>
+            <div class="setup">$0 setup · 6-month minimum</div>
+            <ul class="feat">
+              <li>1 templated AI agent (Sales SDR, Inbox Triage, or Support Deflector)</li>
+              <li>Live in 5 business days</li>
+              <li>Standard connector pack (Gmail, Slack, HubSpot or similar)</li>
+              <li>Shared-cloud deployment</li>
+              <li>Email support, monthly tuning</li>
+            </ul>
+            <a class="cta-ghost buy-btn" data-plan="spark" data-stripe="" href="mailto:jaden@greenaidigital.com?subject=AETHER%20Spark%20enquiry">Start with Spark</a>
+          </div>
+
+          <div class="price-card featured reveal">
+            <span class="price-badge">Most popular</span>
+            <h3 class="tier">Catalyst</h3>
+            <p class="tier-for">Your first fully-custom production agent</p>
+            <div class="price"><span class="amount">$2,997</span><span class="per">/mo</span></div>
+            <div class="setup">+ $4,997 one-time custom build · month-to-month</div>
+            <ul class="feat">
+              <li>1 fully-custom AI agent, built around your business</li>
+              <li>Live in 48 hours after kickoff</li>
+              <li>Unlimited connectors (8,000+ apps via Zapier/Pipedream)</li>
+              <li>Dedicated cloud deployment</li>
+              <li>Email + chat support, weekly tuning</li>
+              <li>Business-hours human monitoring</li>
+            </ul>
+            <a class="cta-primary buy-btn" data-plan="catalyst" data-stripe="" href="mailto:jaden@greenaidigital.com?subject=AETHER%20Catalyst%20strategy%20call">Book a strategy call</a>
+          </div>
+
+          <div class="price-card reveal">
+            <h3 class="tier">Momentum</h3>
+            <p class="tier-for">Run an orchestrated agent fleet</p>
+            <div class="price"><span class="amount">$7,997</span><span class="per">/mo</span></div>
+            <div class="setup">+ $9,997 one-time custom build · month-to-month</div>
+            <ul class="feat">
+              <li>Up to 5 orchestrated agents, working as one team</li>
+              <li>Multi-agent orchestration engine</li>
+              <li>24/7 autonomous operation + human oversight</li>
+              <li>Self-healing &amp; policy guardrails</li>
+              <li>Real-time command-center dashboard</li>
+              <li>Dedicated success manager, SOC 2-ready posture</li>
+              <li>Optional private VPC deployment</li>
+            </ul>
+            <a class="cta-ghost buy-btn" data-plan="momentum" data-stripe="" href="mailto:jaden@greenaidigital.com?subject=AETHER%20Momentum%20enquiry">Scale with Momentum</a>
+          </div>
+        </div>
+
+        <p class="enterprise-note reveal">Need unlimited agents, on-prem deployment, custom model fine-tuning, or a dedicated engineering pod? <a href="mailto:jaden@greenaidigital.com?subject=AETHER%20Enterprise%20enquiry">Talk to us about Enterprise →</a></p>
+
+        <footer class="site-foot reveal">
+          <span>© 2026 GreenAI Solutions</span>
+          <span class="foot-dot">·</span>
+          <span>AETHER Autonomous Agents</span>
+          <span class="foot-dot">·</span>
+          <a href="#hero" data-jump="0">Back to top ↑</a>
+        </footer>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== Onboarding modal (post-checkout flow) ===== -->
+  <div id="onboard" class="onboard" aria-hidden="true">
+    <div class="onboard-card">
+      <button class="onboard-close" aria-label="Close">×</button>
+      <div class="onboard-progress"><span id="onboard-fill"></span></div>
+      <form id="onboard-form" class="onboard-steps" autocomplete="on">
+        <input type="hidden" name="_subject" value="New AETHER intake · {plan}" />
+        <input type="hidden" name="_template" value="table" />
+        <input type="hidden" name="_captcha" value="false" />
+        <input type="hidden" name="plan" id="ob-plan" value="(direct)" />
+        <input type="hidden" name="connectors" id="ob-connectors-val" value="" />
+        <input type="hidden" name="template" id="ob-template-val" value="" />
+        <input type="hidden" name="kickoff_slot" id="ob-slot-val" value="" />
+
+        <ol id="onboard-stepper">
+          <li class="active">1 · Tell us about you</li>
+          <li>2 · Connect your tools</li>
+          <li>3 · Pick your agent</li>
+          <li>4 · Book kickoff</li>
+        </ol>
+
+        <!-- Step 1 -->
+        <div class="ob-step ob-active" data-step="1">
+          <h3>Welcome aboard. Let's get your agent live in 48 hours.</h3>
+          <p class="ob-sub">A senior engineer will read every answer before your kickoff call.</p>
+          <div class="ob-row">
+            <label>Company<input type="text" name="company" required placeholder="Acme Inc." /></label>
+            <label>Your role<input type="text" name="role" required placeholder="COO, Head of Ops…" /></label>
+          </div>
+          <div class="ob-row">
+            <label>Work email<input type="email" name="email" required placeholder="you@company.com" /></label>
+            <label>Team size
+              <select name="team_size"><option>1–10</option><option>11–50</option><option>51–250</option><option>250+</option></select>
+            </label>
+          </div>
+          <label>The #1 outcome this agent should deliver
+            <textarea name="goal" rows="3" required placeholder="e.g. Qualify inbound leads and book demos on my calendar within 5 minutes of form-fill."></textarea>
+          </label>
+          <div class="ob-actions"><button type="button" class="cta-primary" data-ob-next>Continue →</button></div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="ob-step" data-step="2">
+          <h3>Connect the systems your agent will operate.</h3>
+          <p class="ob-sub">Secure OAuth via Pipedream &amp; Nango. We never see your passwords.</p>
+          <div class="ob-connectors">
+            <button class="ob-conn">⊕ Slack</button>
+            <button class="ob-conn">⊕ Gmail</button>
+            <button class="ob-conn">⊕ HubSpot</button>
+            <button class="ob-conn">⊕ Salesforce</button>
+            <button class="ob-conn">⊕ Notion</button>
+            <button class="ob-conn">⊕ Google Calendar</button>
+            <button class="ob-conn">⊕ Stripe</button>
+            <button class="ob-conn">⊕ Shopify</button>
+            <button class="ob-conn">⊕ Intercom</button>
+            <button class="ob-conn">⊕ Twilio / SMS</button>
+            <button class="ob-conn">⊕ WhatsApp</button>
+            <button class="ob-conn">⊕ Other (8,000+)</button>
+          </div>
+          <p class="ob-skip">Don't see yours? We integrate with anything that has an API.</p>
+          <div class="ob-actions">
+            <button type="button" class="cta-ghost" data-ob-prev>← Back</button>
+            <button type="button" class="cta-primary" data-ob-next>Continue →</button>
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="ob-step" data-step="3">
+          <h3>Choose a starting template — we'll customize it to your business.</h3>
+          <p class="ob-sub">Pick the closest match. Your build pod tailors it from there.</p>
+          <div class="ob-tpls">
+            <label class="ob-tpl"><input type="radio" name="tpl"/><b>Sales SDR Agent</b><span>Qualifies leads, books meetings, follows up forever.</span></label>
+            <label class="ob-tpl"><input type="radio" name="tpl"/><b>Inbox Triage Agent</b><span>Reads, routes and drafts replies for your shared inbox.</span></label>
+            <label class="ob-tpl"><input type="radio" name="tpl"/><b>Support Deflection Agent</b><span>Resolves tier-1 tickets, escalates the rest with context.</span></label>
+            <label class="ob-tpl"><input type="radio" name="tpl"/><b>Ops Automator</b><span>Connects your apps, runs recurring workflows, alerts you.</span></label>
+            <label class="ob-tpl"><input type="radio" name="tpl"/><b>Reporting Agent</b><span>Pulls metrics nightly, writes the weekly exec summary.</span></label>
+            <label class="ob-tpl"><input type="radio" name="tpl"/><b>Custom — describe it</b><span>Net-new agent built from your spec.</span></label>
+          </div>
+          <div class="ob-actions">
+            <button type="button" class="cta-ghost" data-ob-prev>← Back</button>
+            <button type="button" class="cta-primary" data-ob-next>Continue →</button>
+          </div>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="ob-step" data-step="4">
+          <h3>You're in. Let's book your kickoff.</h3>
+          <p class="ob-sub">A senior AI engineer will be on the call. Pick any 30-minute slot in the next 24 hours.</p>
+          <div class="ob-slots">
+            <button class="ob-slot">Tomorrow · 9:00 AM</button>
+            <button class="ob-slot">Tomorrow · 11:30 AM</button>
+            <button class="ob-slot">Tomorrow · 2:00 PM</button>
+            <button class="ob-slot">Tomorrow · 4:30 PM</button>
+          </div>
+          <div class="ob-done">
+            <div class="ob-done-mark">✓</div>
+            <h4>Kickoff confirmed.</h4>
+            <p>Calendar invite + intake confirmation on its way to your inbox. Your agent goes live within 48 hours.</p>
+          </div>
+          <div class="ob-actions">
+            <button type="button" class="cta-ghost" data-ob-prev>← Back</button>
+            <button type="submit" class="cta-primary" id="ob-finish">Confirm &amp; submit</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- ===== Three.js engine ===== -->
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+      "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+    }
+  }
+  </script>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
