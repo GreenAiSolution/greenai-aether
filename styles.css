@@ -255,6 +255,45 @@ h3{font-family:"Space Grotesk",sans-serif;font-weight:500;font-size:1.05rem;marg
   -webkit-background-clip:text;background-clip:text;color:transparent;line-height:1}
 .stat-label{color:var(--muted);font-size:.8rem;letter-spacing:.06em;margin-top:.5rem;text-transform:uppercase}
 
+/* ===== FAQ ===== */
+.faq-wrap{margin-top:6rem;max-width:780px;margin-left:auto;margin-right:auto}
+.faq-title{font-family:"Space Grotesk",sans-serif;font-size:clamp(1.6rem,3.5vw,2.2rem);font-weight:700;text-align:center;margin-bottom:.6rem;
+  background:linear-gradient(120deg,var(--ink) 60%,var(--accent));-webkit-background-clip:text;background-clip:text;color:transparent}
+.faq-sub{text-align:center;color:var(--muted);font-size:.9rem;letter-spacing:.04em;margin-bottom:2.8rem}
+
+.faq-list{display:flex;flex-direction:column;gap:.6rem}
+
+.faq-item{
+  background:var(--glass);border:1px solid var(--line);border-radius:14px;
+  backdrop-filter:blur(10px);overflow:hidden;transition:border-color .3s}
+.faq-item[open]{border-color:rgba(94,234,212,.35)}
+.faq-item[open] .faq-chevron::before{transform:rotate(180deg)}
+
+.faq-q{
+  list-style:none;display:flex;align-items:center;justify-content:space-between;gap:1rem;
+  padding:1.1rem 1.4rem;cursor:pointer;font-weight:500;font-size:.95rem;letter-spacing:.01em;
+  transition:color .2s;user-select:none}
+.faq-q::-webkit-details-marker{display:none}
+.faq-item[open] .faq-q{color:var(--accent)}
+
+.faq-chevron{flex-shrink:0;width:22px;height:22px;border-radius:50%;
+  background:rgba(255,255,255,.06);border:1px solid var(--line);
+  display:flex;align-items:center;justify-content:center}
+.faq-chevron::before{
+  content:"";display:block;width:8px;height:8px;
+  border-right:2px solid var(--muted);border-bottom:2px solid var(--muted);
+  transform:rotate(45deg);margin-top:-3px;transition:transform .3s var(--ease)}
+.faq-item[open] .faq-chevron{background:rgba(94,234,212,.12);border-color:rgba(94,234,212,.4)}
+.faq-item[open] .faq-chevron::before{border-color:var(--accent);transform:rotate(225deg);margin-top:3px}
+
+.faq-a{padding:0 1.4rem 1.3rem;color:var(--muted);font-size:.88rem;line-height:1.75;
+  border-top:1px solid var(--line)}
+
+.faq-cta-row{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1.2rem;
+  margin-top:2.4rem;padding:1.4rem 1.8rem;
+  background:var(--glass);border:1px solid var(--line);border-radius:16px;backdrop-filter:blur(10px)}
+.faq-cta-copy{color:var(--muted);font-size:.88rem;max-width:420px}
+
 .site-foot{margin-top:4rem;display:flex;gap:.8rem;justify-content:center;flex-wrap:wrap;font-size:.78rem;color:var(--muted);letter-spacing:.04em}
 .foot-dot{color:rgba(255,255,255,.25)}
 
