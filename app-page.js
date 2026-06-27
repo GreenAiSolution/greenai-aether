@@ -60,7 +60,7 @@ scene.add(shell);
 
 /* City buildings */
 const CITY_RADIUS = 3.4;
-const CITY_COUNT  = 620;
+const CITY_COUNT  = 350;  // Reduced from 620 for better performance
 
 const cityPalette = [
   new THREE.Color(0x0A66C2), // LinkedIn blue
@@ -220,7 +220,7 @@ function makeChipTexture(slug, bg) {
   return tex;
 }
 
-const PER_PLATFORM = 8;
+const PER_PLATFORM = 4;  // Reduced from 8 for performance
 const SWARM = PLATFORMS.length * PER_PLATFORM;
 const swarm = new THREE.Group();
 const swarmSprites = [];
@@ -252,7 +252,7 @@ scene.add(swarm);
 /* ============================================================
    NEURAL PARTICLE FIELD
 ============================================================ */
-const STARS = 2600;
+const STARS = 1200;  // Reduced from 2600 for performance
 const sPos = new Float32Array(STARS * 3);
 const sCol = new Float32Array(STARS * 3);
 for (let i = 0; i < STARS; i++) {
@@ -289,11 +289,11 @@ for (let i = 0; i < 3; i++) {
 scene.add(rings);
 
 /* ============================================================
-   Post-processing: bloom
+   Post-processing: bloom (optimized)
 ============================================================ */
 const composer = new EffectComposer(renderer);
 composer.addPass(new RenderPass(scene, camera));
-const bloom = new UnrealBloomPass(new THREE.Vector2(innerWidth, innerHeight), 0.55, 0.7, 0.32);
+const bloom = new UnrealBloomPass(new THREE.Vector2(innerWidth, innerHeight), 0.35, 0.5, 0.28);  // Reduced intensity
 composer.addPass(bloom);
 
 /* ============================================================
