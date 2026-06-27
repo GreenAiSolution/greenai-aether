@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="theme-color" content="#05060a" />
+<title>Integrate — AETHER Autonomous AI Agents by GreenAI</title>
+<meta name="description" content="48-hour onboarding: paid Monday, live by Wednesday. Connects to 8,000+ apps via OAuth." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+
+  <!-- ===== Loader ===== -->
+  <div id="loader">
+    <div class="loader-inner">
+      <div class="loader-mark">AETHER</div>
+      <div class="loader-bar"><span id="loader-fill"></span></div>
+      <div class="loader-pct" id="loader-pct">0%</div>
+      <div class="loader-sub">Initializing autonomous core</div>
+    </div>
+  </div>
+
+  <!-- ===== WebGL canvas ===== -->
+  <canvas id="scene"></canvas>
+  <div id="scrim"></div>
+
+  <!-- ===== Top navigation ===== -->
+  <header id="nav">
+    <a class="brand" href="./index.html">
+      <span class="brand-dot"></span>
+      AETHER<span class="brand-sub">by GreenAI</span>
+    </a>
+    <nav class="nav-links">
+      <a href="./intelligence.html"><span class="nav-full">Intelligence</span><span class="nav-short">Core</span></a>
+      <a href="./capabilities.html">Capabilities</a>
+      <a href="./scale.html">Scale</a>
+      <a href="./integrate.html">Integrate</a>
+      <a href="./packages.html">Packages</a>
+    </nav>
+    <button id="tour-btn" class="cta-ghost" onclick="location.href='index.html'">← Back to hero</button>
+  </header>
+
+  <!-- ===== Scroll progress rail ===== -->
+  <div id="rail">
+    <div class="rail-track"><span id="rail-fill"></span></div>
+  </div>
+
+  <!-- ===== Content ===== -->
+  <main id="content">
+    <section class="panel" id="integrate">
+      <div class="panel-inner integrate-inner">
+        <div class="eyebrow reveal">04 · INTEGRATE</div>
+        <h2 class="reveal">Paid Monday.<br/>Live by Wednesday.</h2>
+        <p class="lede reveal">Our 48-hour onboarding pipeline turns your purchase into a production agent — connected, tested and operating inside your stack — in two business days.</p>
+
+        <div class="timeline reveal">
+          <div class="tl-step">
+            <div class="tl-num">01</div>
+            <div class="tl-time">Hour 0 — Checkout</div>
+            <h4>Onboard in 5 minutes</h4>
+            <p>Pay, fill the intake form and one-click-connect your tools via secure OAuth. No tickets, no email chains.</p>
+          </div>
+          <div class="tl-step">
+            <div class="tl-num">02</div>
+            <div class="tl-time">Hours 0–36 — Build</div>
+            <h4>Custom build by our pod</h4>
+            <p>A senior AI engineer configures your agent on Claude + n8n, wires your connectors, and loads your business context.</p>
+          </div>
+          <div class="tl-step">
+            <div class="tl-num">03</div>
+            <div class="tl-time">Hours 36–48 — Launch</div>
+            <h4>Go live with white-glove handoff</h4>
+            <p>Live walkthrough call, command-center access, 24/7 monitoring on. Your agent is now working autonomously.</p>
+          </div>
+        </div>
+
+        <div class="connectors reveal">
+          <div class="connectors-label">PLUG INTO 8,000+ APPS</div>
+          <div class="connectors-grid">
+            <span>Slack</span><span>Microsoft Teams</span><span>Gmail</span><span>Outlook</span>
+            <span>HubSpot</span><span>Salesforce</span><span>Pipedrive</span><span>Notion</span>
+            <span>Airtable</span><span>Google Workspace</span><span>Microsoft 365</span><span>Stripe</span>
+            <span>Shopify</span><span>QuickBooks</span><span>Calendly</span><span>Intercom</span>
+            <span>Zendesk</span><span>WhatsApp</span><span>Twilio</span><span>Zapier</span>
+            <span>Make</span><span>Pipedream</span><span>Webhook / API</span><span>+ anything with an API</span>
+          </div>
+        </div>
+
+        <div class="hero-cta reveal" style="margin-top: 2rem; justify-content: center;">
+          <a href="./scale.html" class="cta-ghost">← Timeline</a>
+          <a href="./packages.html" class="cta-primary">View pricing →</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Three.js engine ===== -->
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+      "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+    }
+  }
+  </script>
+  <script type="module" src="./app-page.js"></script>
+</body>
+</html>

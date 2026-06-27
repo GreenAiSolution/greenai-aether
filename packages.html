@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="theme-color" content="#05060a" />
+<title>Packages & Pricing — AETHER Autonomous AI Agents by GreenAI</title>
+<meta name="description" content="AETHER pricing: Spark $797/mo, Catalyst $2,497/mo, Momentum $5,997/mo. Own your AI workforce." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+
+  <!-- ===== Loader ===== -->
+  <div id="loader">
+    <div class="loader-inner">
+      <div class="loader-mark">AETHER</div>
+      <div class="loader-bar"><span id="loader-fill"></span></div>
+      <div class="loader-pct" id="loader-pct">0%</div>
+      <div class="loader-sub">Initializing autonomous core</div>
+    </div>
+  </div>
+
+  <!-- ===== WebGL canvas ===== -->
+  <canvas id="scene"></canvas>
+  <div id="scrim"></div>
+
+  <!-- ===== Top navigation ===== -->
+  <header id="nav">
+    <a class="brand" href="./index.html">
+      <span class="brand-dot"></span>
+      AETHER<span class="brand-sub">by GreenAI</span>
+    </a>
+    <nav class="nav-links">
+      <a href="./intelligence.html"><span class="nav-full">Intelligence</span><span class="nav-short">Core</span></a>
+      <a href="./capabilities.html">Capabilities</a>
+      <a href="./scale.html">Scale</a>
+      <a href="./integrate.html">Integrate</a>
+      <a href="./packages.html">Packages</a>
+    </nav>
+    <button id="tour-btn" class="cta-ghost" onclick="location.href='index.html'">← Back to hero</button>
+  </header>
+
+  <!-- ===== Scroll progress rail ===== -->
+  <div id="rail">
+    <div class="rail-track"><span id="rail-fill"></span></div>
+  </div>
+
+  <!-- ===== Content ===== -->
+  <main id="content">
+    <section class="panel" id="packages">
+      <div class="panel-inner packages-inner">
+        <div class="eyebrow reveal">05 · PACKAGES</div>
+        <h2 class="reveal">Own your AI workforce.</h2>
+        <p class="lede reveal">All-in monthly pricing. No setup fees. No surprise invoices. Cancel anytime on Catalyst or Momentum.</p>
+
+        <div class="price-grid">
+          <div class="price-card reveal">
+            <h3 class="tier">Spark</h3>
+            <p class="tier-for">Land your first agent — fast</p>
+            <div class="price"><span class="amount">$797</span><span class="per">/mo</span></div>
+            <div class="setup">$0 setup · 6-month minimum</div>
+            <ul class="feat">
+              <li>1 templated AI agent (Sales SDR, Inbox Triage, or Support Deflector)</li>
+              <li>Live in 5 business days</li>
+              <li>Standard connector pack (Gmail, Slack, HubSpot or similar)</li>
+              <li>Shared-cloud deployment</li>
+              <li>Email support, monthly tuning</li>
+            </ul>
+            <a class="cta-ghost buy-btn" data-plan="spark" data-stripe="" href="mailto:jaden@greenaidigital.com?subject=AETHER%20Spark%20enquiry">Start with Spark</a>
+          </div>
+
+          <div class="price-card featured reveal">
+            <span class="price-badge">Most popular</span>
+            <h3 class="tier">Catalyst</h3>
+            <p class="tier-for">Your first fully-custom production agent</p>
+            <div class="price"><span class="amount">$2,497</span><span class="per">/mo</span></div>
+            <div class="setup">$0 setup · month-to-month · save 15% annual</div>
+            <ul class="feat">
+              <li>1 fully-custom AI agent, built around your business</li>
+              <li>Live in 48 hours after kickoff</li>
+              <li>Unlimited connectors (8,000+ apps via Zapier/Pipedream)</li>
+              <li>Dedicated cloud deployment</li>
+              <li>Email + chat support, weekly tuning</li>
+              <li>Business-hours human monitoring</li>
+              <li><strong>30-day money-back guarantee</strong></li>
+            </ul>
+            <a class="cta-primary buy-btn" data-plan="catalyst" data-stripe="" href="mailto:jaden@greenaidigital.com?subject=AETHER%20Catalyst%20strategy%20call">Book a strategy call</a>
+          </div>
+
+          <div class="price-card reveal">
+            <h3 class="tier">Momentum</h3>
+            <p class="tier-for">Run an orchestrated agent fleet</p>
+            <div class="price"><span class="amount">$5,997</span><span class="per">/mo</span></div>
+            <div class="setup">$0 setup · month-to-month · save 15% annual</div>
+            <ul class="feat">
+              <li>Up to 5 orchestrated agents, working as one team</li>
+              <li>Multi-agent orchestration engine</li>
+              <li>24/7 autonomous operation + human oversight</li>
+              <li>Self-healing &amp; policy guardrails</li>
+              <li>Real-time command-center dashboard</li>
+              <li>Dedicated success manager, SOC 2-ready posture</li>
+              <li>Optional private VPC deployment</li>
+            </ul>
+            <a class="cta-ghost buy-btn" data-plan="momentum" data-stripe="" href="mailto:jaden@greenaidigital.com?subject=AETHER%20Momentum%20enquiry">Scale with Momentum</a>
+          </div>
+        </div>
+
+        <p class="enterprise-note reveal">Need unlimited agents, on-prem deployment, custom model fine-tuning, or a dedicated engineering pod? <strong>Enterprise plans start at $14,997/mo</strong> — <a href="mailto:jaden@greenaidigital.com?subject=AETHER%20Enterprise%20enquiry">talk to us about Enterprise →</a></p>
+
+        <!-- ============ FOUNDING-CLIENT HOOK ============ -->
+        <div class="founders reveal">
+          <div class="founders-badge">⚡ LAUNCH OFFER · LIMITED</div>
+          <h3 class="founders-title">5 founding-client slots this month.</h3>
+          <p class="founders-sub">Build your first agent with us before our public launch — and lock in founding pricing for life.</p>
+
+          <ul class="founders-list">
+            <li><span class="fl-check">✓</span> Your first fully-custom AI agent built &amp; deployed in 48 hours</li>
+            <li><span class="fl-check">✓</span> <strong>Founding-client pricing locked in forever</strong> — never goes up, even when we raise rates publicly</li>
+            <li><span class="fl-check">✓</span> Direct line to the founder for the lifetime of your account</li>
+            <li><span class="fl-check">✓</span> Priority queue position — front of every delivery</li>
+            <li><span class="fl-check">✓</span> 30-day money-back guarantee — zero risk</li>
+          </ul>
+
+          <p class="founders-ask">All we ask in return: a 30-minute case-study call once your agent has been live for 60 days. That's it.</p>
+
+          <a class="cta-primary cta-founders" href="mailto:jaden@greenaidigital.com?subject=AETHER%20Founding%20Client%20Application&amp;body=Hi%20Jaden%2C%0A%0AI%27d%20like%20to%20apply%20for%20a%20founding-client%20slot.%0A%0ACompany%3A%20%0AWebsite%3A%20%0AWhat%20I%27d%20like%20our%20first%20agent%20to%20do%3A%20%0A">Apply for a founding-client slot →</a>
+          <p class="founders-or">Not ready? <a href="mailto:jaden@greenaidigital.com?subject=AETHER%20Free%20Workflow%20Audit">Get the free 30-min Workflow Audit instead →</a></p>
+        </div>
+
+        <!-- ============ FAQ ============ -->
+        <div class="faq-wrap reveal">
+          <h2 class="faq-title">Questions we get asked every day</h2>
+          <p class="faq-sub">Straight answers. No sales fluff.</p>
+
+          <div class="faq-list">
+
+            <details class="faq-item">
+              <summary class="faq-q">Will my agent really be live in 48 hours?<span class="faq-chevron"></span></summary>
+              <div class="faq-a">Yes — and most launch faster. The moment your kickoff call ends our engineers start building. We handle everything: cloud provisioning, connector auth, testing, and final QA. You get a Loom walkthrough and a live handoff before we consider the job done. The 48-hour clock is a hard commitment, not a marketing claim.</div>
+            </details>
+
+            <details class="faq-item">
+              <summary class="faq-q">Do I need a developer or IT team on my side?<span class="faq-chevron"></span></summary>
+              <div class="faq-a">Not at all. We built AETHER specifically for business owners and operators — not engineers. You'll answer a few plain-English questions during onboarding, then we disappear and build. No code, no config files, no internal IT resources required. If you can use Gmail, you can run an AETHER agent.</div>
+            </details>
+
+            <details class="faq-item">
+              <summary class="faq-q">What if the agent makes a mistake or goes off-script?<span class="faq-chevron"></span></summary>
+              <div class="faq-a">Every agent ships with a policy guardrail layer that defines exactly what it can and cannot do autonomously. Anything outside those bounds gets flagged and held for human review. On top of that, Catalyst includes business-hours human monitoring and Momentum runs 24/7 oversight plus self-healing — so the agent corrects itself before you even notice an issue.</div>
+            </details>
+
+            <details class="faq-item">
+              <summary class="faq-q">How do you keep my business data secure?<span class="faq-chevron"></span></summary>
+              <div class="faq-a">All tool connections use secure OAuth — we never touch your passwords or store credentials in plain text. Data in transit is encrypted with TLS 1.3; at rest we use AES-256. Your agent runs in a dedicated cloud container isolated from every other customer. Momentum customers can optionally deploy into a private VPC on their own infrastructure.</div>
+            </details>
+
+            <details class="faq-item">
+              <summary class="faq-q">Can I cancel if it's not right for my business?<span class="faq-chevron"></span></summary>
+              <div class="faq-a">Catalyst and Momentum are month-to-month — cancel any time with 30 days' notice, no penalty, no questions. Catalyst also carries a 30-day money-back guarantee: if the agent doesn't deliver measurable value in the first month, we refund you in full. Spark is a 6-month commitment (locked-in price, not locked-in results) with the same money-back window on month one.</div>
+            </details>
+
+            <details class="faq-item">
+              <summary class="faq-q">My industry is regulated (law / healthcare / finance). Can you handle that?<span class="faq-chevron"></span></summary>
+              <div class="faq-a">Yes. We've designed AETHER agents around regulated workflows specifically. The agent handles intake, qualification, scheduling, follow-up, and document triage — the licensed professional makes every regulated call. HIPAA deployments require a Business Associate Agreement (BAA), which we'll help you set up.</div>
+            </details>
+
+            <details class="faq-item">
+              <summary class="faq-q">How is this different from ChatGPT, Copilot, or HubSpot's AI?<span class="faq-chevron"></span></summary>
+              <div class="faq-a">Those are tools — they reply when you ask them something. AETHER builds <em>agents</em> — they decide what to do, take action across your stack (CRM, calendar, email, Slack), and handle entire workflows end-to-end without you in the loop. Completely different product category.</div>
+            </details>
+
+            <details class="faq-item">
+              <summary class="faq-q">How will I know the agent is actually working?<span class="faq-chevron"></span></summary>
+              <div class="faq-a">Momentum customers get a real-time command-center dashboard showing every action the agent takes, queued tasks, and outcomes. Catalyst customers receive weekly performance summaries via email plus full audit logs on request. And because the agent is doing things in your actual tools — booking meetings, sending emails, updating CRMs — the results are instantly visible where your work already lives.</div>
+            </details>
+
+          </div>
+
+          <div class="faq-cta-row">
+            <p class="faq-cta-copy">Still have questions? We respond to every email within one business hour.</p>
+            <a class="cta-primary" href="mailto:jaden@greenaidigital.com?subject=AETHER%20question">Ask us anything →</a>
+          </div>
+        </div>
+
+        <footer class="site-foot reveal">
+          <span>© 2026 GreenAI Solutions</span>
+          <span class="foot-dot">·</span>
+          <span>AETHER Autonomous Agents</span>
+          <span class="foot-dot">·</span>
+          <a href="./index.html">Back to top ↑</a>
+        </footer>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Three.js engine ===== -->
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+      "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+    }
+  }
+  </script>
+  <script type="module" src="./app-page.js"></script>
+</body>
+</html>

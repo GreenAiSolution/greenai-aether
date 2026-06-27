@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="theme-color" content="#05060a" />
+<title>Scale — AETHER Autonomous AI Agents by GreenAI</title>
+<meta name="description" content="AETHER is built for planetary demand: 50M+ agent-hours, 99.98% uptime, millisecond latency, 40k+ teams." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+
+  <!-- ===== Loader ===== -->
+  <div id="loader">
+    <div class="loader-inner">
+      <div class="loader-mark">AETHER</div>
+      <div class="loader-bar"><span id="loader-fill"></span></div>
+      <div class="loader-pct" id="loader-pct">0%</div>
+      <div class="loader-sub">Initializing autonomous core</div>
+    </div>
+  </div>
+
+  <!-- ===== WebGL canvas ===== -->
+  <canvas id="scene"></canvas>
+  <div id="scrim"></div>
+
+  <!-- ===== Top navigation ===== -->
+  <header id="nav">
+    <a class="brand" href="./index.html">
+      <span class="brand-dot"></span>
+      AETHER<span class="brand-sub">by GreenAI</span>
+    </a>
+    <nav class="nav-links">
+      <a href="./intelligence.html"><span class="nav-full">Intelligence</span><span class="nav-short">Core</span></a>
+      <a href="./capabilities.html">Capabilities</a>
+      <a href="./scale.html">Scale</a>
+      <a href="./integrate.html">Integrate</a>
+      <a href="./packages.html">Packages</a>
+    </nav>
+    <button id="tour-btn" class="cta-ghost" onclick="location.href='index.html'">← Back to hero</button>
+  </header>
+
+  <!-- ===== Scroll progress rail ===== -->
+  <div id="rail">
+    <div class="rail-track"><span id="rail-fill"></span></div>
+  </div>
+
+  <!-- ===== Content ===== -->
+  <main id="content">
+    <section class="panel" id="scale">
+      <div class="panel-inner center">
+        <div class="eyebrow reveal">03 · SCALE</div>
+        <h2 class="reveal">Built for planetary demand.</h2>
+        <div class="stats reveal">
+          <div class="stat"><div class="stat-num" data-count="50" data-suffix="M+">0</div><div class="stat-label">agent-hours run</div></div>
+          <div class="stat"><div class="stat-num" data-count="99" data-suffix=".98%">0</div><div class="stat-label">uptime SLA</div></div>
+          <div class="stat"><div class="stat-num" data-count="180" data-suffix="ms">0</div><div class="stat-label">median latency</div></div>
+          <div class="stat"><div class="stat-num" data-count="40" data-suffix="k+">0</div><div class="stat-label">teams onboarded</div></div>
+        </div>
+        <div class="hero-cta reveal" style="margin-top: 2rem; justify-content: center;">
+          <a href="./capabilities.html" class="cta-ghost">← Back to capabilities</a>
+          <a href="./integrate.html" class="cta-primary">Integration timeline →</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Three.js engine ===== -->
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+      "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+    }
+  }
+  </script>
+  <script type="module" src="./app-page.js"></script>
+</body>
+</html>
