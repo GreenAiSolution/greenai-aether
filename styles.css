@@ -361,10 +361,27 @@ h3{font-family:"Space Grotesk",sans-serif;font-weight:500;font-size:1.05rem;marg
   .nav-short{display:inline}
   #tour-btn{display:none}
   .cap-grid{grid-template-columns:1fr}
-  .stats{grid-template-columns:1fr 1fr;gap:1.6rem}
+  .stats{grid-template-columns:1fr 1fr;gap:1.4rem}
   #rail{right:.7rem}
-  .panel{padding:6rem 1.4rem}
-  .panel-inner.right,.panel-inner.left{margin:0}
+  /* MOBILE: kill dead vertical space — panels size to their content */
+  .panel{min-height:auto;padding:3.2rem 1.4rem;align-items:flex-start}
+  #hero{min-height:92vh;align-items:center}              /* keep hero as the big entry impression */
+  #packages{padding-bottom:4.5rem}                       /* breathing room for the founders+FAQ block */
+  .panel-inner.right,.panel-inner.left,.panel-inner.center{margin:0;max-width:100%}
+  .panel-inner.center{text-align:left}                   /* mobile reads better left-aligned */
+  #hero .panel-inner.center{text-align:center}           /* hero stays centered for impact */
+  .scroll-hint{margin-top:2rem}
+  h1{font-size:clamp(2.6rem,12vw,3.6rem)}
+  h2{font-size:clamp(1.9rem,7vw,2.6rem);margin-bottom:1.1rem}
+  .lede{font-size:1.02rem;margin-bottom:1.6rem}
+  .body{font-size:1rem;margin-bottom:1.4rem}
+  .ticks{gap:.6rem}
+  .price-grid{margin:1.8rem 0 1.2rem;gap:1rem}
+  .founders{margin-top:2.4rem}
+  .faq-wrap{margin-top:3rem}
+  .timeline{margin-top:1.6rem}
+  .connectors{margin-top:1.8rem}
+  .site-foot{margin-top:2.6rem}
 }
 @media (prefers-reduced-motion:reduce){
   .reveal{transition:none;opacity:1;transform:none}
